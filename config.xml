@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<widget xmlns       =   "http://www.w3.org/ns/widgets"
+        xmlns:gap   =   "http://phonegap.com/ns/1.0"
+        id          =   "com.aitor.7yMedio"
+        versionCode =   "1"
+        version     =   "1.0.0">
+        
+        <name>7 y medio</name>
+        <description>Juega al 7 y medio en tu móvil</description> 
+        <author>Aitor Redondo</author>
+</widget>
+
