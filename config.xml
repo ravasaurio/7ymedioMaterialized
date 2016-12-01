@@ -9,5 +9,6 @@
         <name>7 y medio</name>
         <description>Juega al 7 y medio en tu móvil</description> 
         <author>Aitor Redondo</author>
+        <icon src="img/appicon.png" platform="android" width="180" height="180"/>
 </widget>
 
