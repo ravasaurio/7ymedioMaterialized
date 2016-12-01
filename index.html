@@ -14,7 +14,7 @@
         <script src="js/game.js"></script>
         <title>7 y medio</title>
     </head>
-    <body>
+    <body class="teal lighten-5">
         <header>
             <!-- NavBar -->
             <nav class="nav-extended cyan darken-3">
@@ -49,7 +49,7 @@
         <main>
             <!-- Juego -->
             <div id="juego" class="col s12 active">
-                <div class="container">
+                <div class="container cyan-text text-darken-4">
                     <div class="row">
                         <div id="puntos">
                             <h4 class="center-align">Tus puntos: 0</h4>
@@ -72,9 +72,9 @@
                         </div>
                     </div>
                     <div class="fixed-action-btn">
-                        <button class="btn-floating btn-large red" id="pedir"><i class="material-icons">done</i></button>
-                        <button disabled class="btn-floating red" id="plantarse"><i class="material-icons">pause</i></button>
-                        <button class="btn-floating red" id="newGame"><i class="material-icons">replay</i></button>
+                        <button class="btn-floating btn-large green lighten-2" id="pedir"><i class="material-icons">done</i></button>
+                        <button disabled class="btn-floating green darken-1" id="plantarse"><i class="material-icons">pause</i></button>
+                        <button class="btn-floating  teal darken-4" id="newGame"><i class="material-icons">replay</i></button>
                     </div>
                 </div><!-- End Container -->
             </div><!-- End Juego -->
@@ -83,13 +83,13 @@
                 <div class="container">
                     <div class="row">
                         <ul class="collection col l6 offset-l3">
-                            <li class="collection-item">Pide carta con <a class="btn-floating waves-effect waves-light red"><i class="material-icons">done</i></a></li>
-                            <li class="collection-item">Plántate con <a class="btn-floating waves-effect waves-light red"><i class="material-icons">pause</i></a></li>
+                            <li class="collection-item">Pide carta con <a class="btn-floating waves-effect waves-light green lighten-2"><i class="material-icons">done</i></a></li>
+                            <li class="collection-item">Plántate con <a class="btn-floating waves-effect waves-light green darken-1"><i class="material-icons">pause</i></a></li>
                             <li class="collection-item">El objetivo es llegar a 7 y medio sin pasarse, o plantarse lo mas cerca posible.</li>
                             <li class="collection-item">Primero juega el jugador, después la banca.</li>
                             <li class="collection-item">Las cartas tienen un valor en puntos equivalente a su numero, excepto las figuras (Sota, Caballo y Rey), que valen 0,5.</li>
                         </ul>
-                        <ul class="collapsible popout col l6 offset-l3" data-collapsible="accordion">
+                        <ul class="collapsible popout col l6 s12 offset-l3" data-collapsible="accordion">
                             <li>
                                 <div class="collapsible-header"><i class="material-icons">thumb_up</i>Ganas si...</div>
                                 <div class="collapsible-body">

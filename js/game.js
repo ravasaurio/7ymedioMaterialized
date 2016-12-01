@@ -82,7 +82,7 @@ function plantarse(){
     disableButtons();
     turno="machine";
     mostrarCarta();
-    if(machineScore<=playerScore&&machineScore<puntuacionMaxima){
+    if(machineScore<playerScore&&machineScore<puntuacionMaxima){
         setTimeout(plantarse, 1000);
     }else{
         puntuacion();
@@ -135,8 +135,6 @@ function disableButtons(){
 function nuevaPartida(){
     turno="player";
     playerScore=0;
-    // for (var i= document.images.length; i-->0;)
-    //     document.images[i].parentNode.removeChild(document.images[i]);
     
     document.getElementById("player").innerHTML="";
     document.getElementById("machine").innerHTML="";
