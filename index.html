@@ -1,0 +1,185 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <!-- Google Icon Font -->
+        <link href="css/google-icon-font.css" rel="stylesheet">
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/materialize.css">
+        <link rel="stylesheet" href="css/custom.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <!-- JS -->
+        <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+        <script src="js/materialize.js"></script>
+        <script src="js/game.js"></script>
+        <title>7 y medio</title>
+    </head>
+    <body>
+        <header>
+            <!-- NavBar -->
+            <nav class="nav-extended cyan darken-3">
+                <div class="container">
+                    <div class="nav-wrapper">
+                        <a href="#" class="brand-logo">Siete y medio</a>
+                        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                        <ul id="nav-mobile" class="right hide-on-med-and-down">
+                            <li><a href="#modal1">Acerca de</a></li>
+                            <li><a href="#modal2">Contacto</a></li>
+                        </ul>
+                        <ul class="side-nav" id="mobile-demo">
+                            <li>
+							<div class="userView">
+								<div class="background brown lighten-1"></div>
+								<a href="#!user"><img class="circle" src="img/yo.jpg"></a>
+								<a href="#!name"><span class="white-text name">Aitor Redondo</span></a>
+								<a href="#!email"><span class="white-text email">aredondob@gmail.com</span></a>
+							</div>
+						</li>
+                            <li><a href="#modal1">Acerca de</a></li>
+                            <li><a href="#modal2">Contacto</a></li>
+                        </ul>
+                        <ul class="tabs tabs-transparent">
+                            <li class="tab"><a href="#juego">Juego</a></li>
+                            <li class="tab"><a href="#normas">Normas</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav><!-- End NavBar -->
+        </header>
+        <main>
+            <!-- Juego -->
+            <div id="juego" class="col s12 active">
+                <div class="container">
+                    <div class="row">
+                        <div id="puntos">
+                            <h4 class="center-align">Tus puntos: 0</h4>
+                        </div>
+                        <div id="player" class="col s12 l6 offset-l3">
+                            <!--cartas jugador -->
+                        </div>
+                    </div><!-- End Row -->
+                    <div class="row">
+                        <div id="puntosBanca">
+                            <h4 class="center-align">Puntos de la banca: 0</h4>
+                        </div>
+                        <div id="machine" class="col s12 l6 offset-l3">
+                            <!-- cartas banca -->
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div id="ganador" class="col s12 l6 offset-l3">
+                            <h4 class="center-align">SUERTE</h4>
+                        </div>
+                    </div>
+                    <div class="fixed-action-btn">
+                        <button class="btn-floating btn-large red" id="pedir"><i class="material-icons">done</i></button>
+                        <button disabled class="btn-floating red" id="plantarse"><i class="material-icons">pause</i></button>
+                        <button class="btn-floating red" id="newGame"><i class="material-icons">replay</i></button>
+                    </div>
+                </div><!-- End Container -->
+            </div><!-- End Juego -->
+            <!-- Normas -->
+            <div id="normas" class="col s12">
+                <div class="container">
+                    <div class="row">
+                        <ul class="collection col l6 offset-l3">
+                            <li class="collection-item">Pide carta con <a class="btn-floating waves-effect waves-light red"><i class="material-icons">done</i></a></li>
+                            <li class="collection-item">Plántate con <a class="btn-floating waves-effect waves-light red"><i class="material-icons">pause</i></a></li>
+                            <li class="collection-item">El objetivo es llegar a 7 y medio sin pasarse, o plantarse lo mas cerca posible.</li>
+                            <li class="collection-item">Primero juega el jugador, después la banca.</li>
+                            <li class="collection-item">Las cartas tienen un valor en puntos equivalente a su numero, excepto las figuras (Sota, Caballo y Rey), que valen 0,5.</li>
+                        </ul>
+                        <ul class="collapsible popout col l6 offset-l3" data-collapsible="accordion">
+                            <li>
+                                <div class="collapsible-header"><i class="material-icons">thumb_up</i>Ganas si...</div>
+                                <div class="collapsible-body">
+                                    <ul class="collection">
+                                        <li class="collection-item">Te plantas sin superar el 7 y medio y superas a la banca (o la banca se pasa).</li>
+                                        <li class="collection-item">Consigues un 7 y medio, y la banca no.</li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="collapsible-header"><i class="material-icons">thumb_down</i>Pierdes si...</div>
+                                <div class="collapsible-body">
+                                    <ul class="collection">
+                                        <li class="collection-item">LLegas a 7 y medio, pero la banca también.</li>
+                                        <li class="collection-item">Te pasas de 7 y medio.</li>
+                                        <li class="collection-item">Te plantas sin superar el 7 y medio y la banca, sin pasarse de 7 y medio te supera.</li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div><!-- End Row -->
+                </div><!-- End Container -->
+            </div><!-- End Normas -->
+            <!-- Acerca de -->
+            <div id="modal1" class="modal bottom-sheet">
+                <div class="modal-content">
+                    <div class="container">
+                        <h4>7 y medio v2.0 Materialized</h4>
+                        <h5>Tecnologías utilizadas</h5>
+                        <ul class="collection col l6 offset-l3">
+                            <li class="collection-item">JavaScript.</li>
+                            <li class="collection-item">JQuery.</li>
+                            <li class="collection-item">HTML 5.</li>
+                            <li class="collection-item">CSS (Materialize)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="modal-footer">
+                        <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Cerrar</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Contacto -->
+            <div id="modal2" class="modal bottom-sheet">
+                <div class="modal-content">
+                    <div class="container">
+                        <h4>Aitor Redondo Baz</h4>
+                        <a href="https://twitter.com/ravasaurio">
+						<div class="chip">
+						    <img src="img/logo-twitter.png" alt="twitter">
+						    @ravasaurio
+						</div>
+					</a>
+					<a href="https://github.com/ravasaurio">
+						<div class="chip">
+						    <img src="img/logo-github.png" alt="github">
+						    ravasaurio
+						</div>
+					</a>
+					<a href="https://www.google.com/gmail/">
+						<div class="chip">
+						    <img src="img/logo-gmail.png" alt="gmail">
+						    aredondob@gmail.com
+						</div>
+					</a>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="modal-footer">
+                        <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Cerrar</a>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="page-footer cyan darken-3">
+            <div class="container">
+                <div class="row">
+                    <div class="col l6 s12">
+                        <h5 class="white-text">Siete y medio</h5>
+                        <p class="grey-text text-lighten-4">El clásico 7 y medio, ahora en tu movil.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <div class="container">
+                    © 2016 Aitor Redondo
+                    <a class="grey-text text-lighten-4 right" href="http://materializecss.com/">Materialize CSS</a>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
